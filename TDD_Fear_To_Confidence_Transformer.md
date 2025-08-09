@@ -74,5 +74,69 @@ TO:   "How will I know when it's solved?"
 - Problem: Outdated docs
 - **TDD Solution**: Executable specifications that never lie
 ---
-### Testable vs Non-Testable Scenarios
+### Testable vs Non-Testable S/W
 <img width="1530" height="531" alt="Screenshot from 2025-08-09 15-17-17" src="https://github.com/user-attachments/assets/6a315fdf-3de3-4265-bc58-89b88d182ff2" />
+**❌ Non-Testable Approach:**
+```java
+// Hard to test - direct external dependencies
+public class OrderService {
+    public void processOrder(Order order) {
+        // Direct database call
+        database.save(order);
+        // Direct email service call  
+        emailService.sendConfirmation(order.getEmail());
+        // Direct payment processing
+        paymentGateway.charge(order.getAmount());
+    }
+}
+```
+
+**✅ Testable Approach:**
+```java
+// Easy to test - dependency injection
+public class OrderService {
+    private final OrderRepository repository;
+    private final EmailService emailService;
+    private final PaymentService paymentService;
+    
+    public OrderService(OrderRepository repository, 
+                       EmailService emailService,
+                       PaymentService paymentService) {
+        this.repository = repository;
+        this.emailService = emailService;
+        this.paymentService = paymentService;
+    }
+    
+    public OrderResult processOrder(Order order) {
+        repository.save(order);
+        emailService.sendConfirmation(order.getEmail());
+        return paymentService.charge(order.getAmount());
+    }
+}
+
+// Now we can test with mocks/stubs
+@Test
+public void shouldProcessOrderSuccessfully() {
+    // Given
+    OrderRepository mockRepo = mock(OrderRepository.class);
+    EmailService mockEmail = mock(EmailService.class);
+    PaymentService mockPayment = mock(PaymentService.class);
+    
+    when(mockPayment.charge(100.0)).thenReturn(PaymentResult.success());
+    
+    OrderService service = new OrderService(mockRepo, mockEmail, mockPayment);
+    
+    // When
+    OrderResult result = service.processOrder(new Order(100.0));
+    
+    // Then
+    assertTrue(result.isSuccess());
+    verify(mockRepo).save(any(Order.class));
+    verify(mockEmail).sendConfirmation(anyString());
+}
+```
+**❌ EASILY Non-Testable Architecture**              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **✅ Testable Architecture** 
+
+<img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
+
+---
