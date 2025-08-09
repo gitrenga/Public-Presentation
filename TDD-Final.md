@@ -423,9 +423,8 @@ Transform from **"I hope this works"** to **"I know this works"**
 
 **Thank you! Questions?**
 
-📧 Contact: [Your Email]  
-🔗 GitHub: [Your Repository with examples]  
-💬 Let's continue the conversation!
+📧 Contact: [https://www.linkedin.com/feed/]  
+🔗 GitHub: [https://github.com/gitrenga/Public-Presentation/edit/main/TDD-Final.md]  
 
 ---
 
