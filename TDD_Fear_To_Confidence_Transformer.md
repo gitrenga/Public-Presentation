@@ -273,3 +273,12 @@ public void servicesShouldNotHaveCircularDependencies() {
 
 <img width="692" height="348" alt="Test-Pyramid" src="https://github.com/user-attachments/assets/58078528-c1ab-4c58-853b-5bab45bacf36" />
 
+### Golden Rules:
+1. **Fast feedback first** - Unit tests run in milliseconds
+2. **Test behavior, not implementation** - What it does, not how
+3. **Independent tests** - No order dependencies
+4. **One assertion per concept** - Clear failure messages
+
+---
+
+
