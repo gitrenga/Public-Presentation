@@ -18,3 +18,11 @@
 >
 ---
 ## 🔄 What is TDD?
+
+<img width="401" height="231" alt="TDD-loop" src="https://github.com/user-attachments/assets/37926e82-eee9-46d9-8e92-797c1cc97517" />
+
+```
+FROM: "How do I solve this problem?"
+TO:   "How will I know when it's solved?"
+```
+---
