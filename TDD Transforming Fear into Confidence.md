@@ -6,6 +6,7 @@
 <div style="display: flex; gap: 20px;">
   <img src="your-image-url.jpg" alt="Description of your image" style="max-width: 50%;">
   <div>
+    
   ### 🎯 Core Content Sections:
 - [🚀 Opening & Personal Journey] *(3 min)*
 - [🔄 TDD Foundation] *(4 min)*  
@@ -21,6 +22,7 @@
 - [🚀 Organizational Adoption] *(8 min)*
 - [🛠️ Getting Started Monday] *(4 min)*
 - [❓ Q&A & Wrap-up] *(10 min)*
+  
   </div>
 </div>
 
