@@ -48,6 +48,26 @@ TO:   "How will I know when it's solved?"
 
 ---
 
+## 💻 Live Coding Demo: Building with TDD
+**(10 minutes)**
+
+### 🎭 Myth vs Reality Check
+
+| **Myth** | **Reality** |
+|----------|-------------|
+| "TDD slows you down" | Initial investment, long-term speed gain |
+| "100% coverage required" | Focus on behavior, not metrics |
+| "Only for unit tests" | Applies to all testing levels |
+| "Too complex for beginners" | Start small, build confidence |
+
+### Key Observations from Demo:
+- ✅ Started with simplest possible implementation
+- ✅ Each test forced better code design
+- ✅ Confidence to make changes immediately
+- ✅ Clear specification of behavior
+- ✅ Refactoring became fearless
+
+---
 ## 💔 The Pain → 💚 The Transformation
 **(8 minutes)**
 
@@ -111,29 +131,6 @@ TO:   "How will I know when it's solved?"
 - **Leads**: Predictable delivery, fewer fire drills
 - **Managers**: Lower maintenance costs, faster features
 - **Architects**: Better design, cleaner interfaces
-
----
-
-## 💻 Live Coding Demo: Building with TDD
-**(10 minutes)**
-
-### 🎭 Myth vs Reality Check
-
-| **Myth** | **Reality** |
-|----------|-------------|
-| "TDD slows you down" | Initial investment, long-term speed gain |
-| "100% coverage required" | Focus on behavior, not metrics |
-| "Only for unit tests" | Applies to all testing levels |
-| "Too complex for beginners" | Start small, build confidence |
-
-### Key Observations from Demo:
-- ✅ Started with simplest possible implementation
-- ✅ Each test forced better code design
-- ✅ Confidence to make changes immediately
-- ✅ Clear specification of behavior
-- ✅ Refactoring became fearless
-
----
 
 ## 🏗️ Beyond Code: TDD Principles in Operations
 **(7 minutes)**
