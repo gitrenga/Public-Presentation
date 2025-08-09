@@ -77,7 +77,9 @@ TO:   "How will I know when it's solved?"
 ### Testable vs Non-Testable S/W
 <img width="1530" height="531" alt="Screenshot from 2025-08-09 15-17-17" src="https://github.com/user-attachments/assets/6a315fdf-3de3-4265-bc58-89b88d182ff2" />
 
-**❌ Non-Testable Approach:**
+**CODE**
+
+**❌ Non-Testable:**
 
 ```java
 // Hard to test - direct external dependencies
@@ -93,7 +95,7 @@ public class OrderService {
 }
 ```
 
-**✅ Testable Approach:**
+**✅ Testable:**
 ```java
 // Easy to test - dependency injection
 public class OrderService {
@@ -137,7 +139,10 @@ public void shouldProcessOrderSuccessfully() {
     verify(mockEmail).sendConfirmation(anyString());
 }
 ```
-**❌ Not-So-Testable Architecture**              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **✅ Testable Architecture** 
+
+**ARCHITECTURE**
+
+**❌ Not-So-Testable**              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **✅ Testable** 
 
 <img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
 
