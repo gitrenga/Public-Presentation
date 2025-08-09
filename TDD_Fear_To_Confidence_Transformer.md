@@ -281,5 +281,233 @@ public void servicesShouldNotHaveCircularDependencies() {
 4. **One assertion per concept** - Clear failure messages
 
 ---
+---
 
+## ⚠️ Common TDD Pitfalls (Anti-Patterns)
+**(4 minutes)**
+
+### 🚨 Don't Do These:
+
+**❌ Testing Implementation Details**
+```java
+// BAD: Testing internal structure
+verify(userService).validateEmail(anyString());
+
+// GOOD: Testing behavior  
+User result = userService.createUser("test@example.com");
+assertTrue(result.isValid());
+```
+
+**❌ Ice Cream Cone Testing**
+- Too many slow E2E tests, few unit tests
+- Fragile, expensive, slow feedback
+
+**❌ 100% Coverage Obsession**
+- Coverage ≠ Quality
+- Focus on meaningful tests, not metrics
+
+**❌ Order-Dependent Tests**
+- Tests should run in any order
+- Each test sets up its own data
+
+**❌ Multiple Assertions Per Test**
+- Hard to debug when they fail
+- One concept per test
+
+### ✅ Do These Instead:
+- **Test the public interface** - What your users/callers see
+- **One assertion per concept** - Clear failure diagnosis
+- **Make tests readable** - They're documentation too
+- **Refactor test code** - Keep it clean like production code
+
+---
+## 🚦 When to Use TDD (And When Not To)
+**(3 minutes)**
+
+### ✅ Perfect for TDD:
+- **Business logic** - Your core value proposition
+- **Complex algorithms** - Multiple edge cases
+- **API endpoints** - Clear contracts
+- **Bug fixes** - Write failing test, then fix
+- **Critical paths** - Cannot afford to break
+
+### ⏸️ Skip TDD For:
+- **Spike/exploration code** - You're learning
+- **Trivial getters/setters** - No business logic
+- **Pure UI layouts** - Visual design work
+- **Performance optimization** - Measurement-focused
+
+### 🎯 The Decision Framework:
+**Ask yourself**: 
+- "Will this break user workflows if it fails?"
+- "Are there multiple ways this could go wrong?"
+- "Will I need to change this frequently?"
+
+**If YES → Use TDD**
+
+---
+
+## 📊 TDD Success Stories: Real Impact
+**(3 minutes)**
+
+### Industry Data & Real Results:
+
+**📈 Microsoft Study (2008-2012):**
+- 15-35% increase in development time initially
+- 40-90% decrease in defect density
+- **ROI: 2-3x within 6 months**
+
+**🏢 IBM Case Study:**
+- 50% reduction in production defects
+- 15% improvement in development productivity
+- 25% faster time to market for new features
+
+**💰 Business Impact:**
+- **Defect Cost**: 10x cheaper to fix in development vs production
+- **Developer Confidence**: 85% report higher confidence in changes
+- **Technical Debt**: 60% reduction in code complexity
+
+### 🎯 What This Means for Your Organization:
+- **Developers**: Less debugging, more building
+- **Leads**: Predictable delivery, fewer fire drills
+- **Managers**: Lower maintenance costs, faster features
+- **Architects**: Better design, cleaner interfaces
+  
+---
+
+## 🚀 Organizational Adoption Strategy
+**(4 minutes)**
+
+### 🎯 Role-Specific Benefits & Actions:
+
+#### For **Developers**:
+**Benefits**: Less debugging time, more confident refactoring, clearer requirements
+**Action**: Start with one small feature this sprint
+
+#### For **Team Leads**:
+**Benefits**: Predictable velocity, fewer production issues, better team morale
+**Action**: Introduce TDD in retrospectives, track defect trends
+
+#### For **Managers**:
+**Benefits**: Reduced maintenance costs, faster feature delivery, lower risk
+**Action**: Measure before/after metrics, support team training time
+
+#### For **Architects**:
+**Benefits**: Better system design, clearer interfaces, easier integration
+**Action**: Promote testable architectures, review design patterns
+
+### 📈 Adoption Roadmap:
+
+**Week 1-2: Start Small**
+- Pick one developer, one feature
+- Write tests for new code only
+- Measure initial metrics (defects, confidence)
+
+**Month 1-3: Team Adoption**
+- Team TDD workshops
+- Pair programming with TDD
+- Refactor legacy code when touching it
+
+**Month 3-6: Organization-wide**
+- Share success stories
+- Cross-team knowledge sharing
+- Make TDD part of definition of done
+
+### 🛡️ Handling Common Resistance:
+
+**"We don't have time"** → Start with bug fixes, show time savings
+**"Tests slow us down"** → Measure debugging time before/after
+**"Legacy code is too hard"** → Begin with new features only
+**"Not everything needs tests"** → Agree! Focus on critical paths
+
+---
+
+## 🛠️ Getting Started Monday: Your Action Plan
+**(3 minutes)**
+
+### 🎯 Choose Your Adventure:
+
+#### **Beginner Path** (Never done TDD):
+1. **Pick the smallest feature** in your current sprint
+2. **Write one test** before writing code
+3. **Make it pass** with minimal code
+4. **Notice how it feels** - the confidence boost
+5. **Share the experience** with your team
+
+#### **Intermediate Path** (Some TDD experience):
+1. **Identify a complex business rule** you're working on
+2. **List all edge cases** as test scenarios
+3. **Implement with TDD** using red-green-refactor
+4. **Compare** with your usual approach
+5. **Teach someone else** what you learned
+
+#### **Advanced Path** (Regular TDD user):
+1. **Extend TDD to integration testing** with TestContainers
+2. **Add contract testing** for your APIs
+3. **Implement DORA metrics** testing in your pipeline
+4. **Mentor team members** in TDD practices
+5. **Present your success story** to leadership
+
+---
+
+## 📊 Key Takeaways by Role
+**(2 minutes)**
+
+### 💻 **Developers**: Your Daily Toolkit
+- TDD = Design technique first, testing second
+- Red-Green-Refactor becomes muscle memory
+- Confidence to experiment and refactor fearlessly
+
+### 👥 **Team Leads**: Your Success Metrics
+- Track defect reduction and cycle time improvement
+- Use TDD for knowledge sharing and code reviews
+- Build team confidence through shared practices
+
+### 📈 **Managers**: Your Business Case
+- 40-90% defect reduction (Microsoft data)
+- 2-3x ROI within 6 months
+- Faster feature delivery with lower risk
+
+### 🏗️ **Architects**: Your Design Philosophy
+- Testable code = better architecture
+- Clear interfaces and loose coupling
+- Foundation for microservices and cloud-native design
+
+---
+
+## ❓ Q&A & Interactive Discussion
+**(5 minutes)**
+
+### 🗳️ Final Poll: What's Your Next Step?
+- Start TDD on current feature
+- Set up testing framework
+- Convince my team
+- Need more training
+- Ready to be TDD champion
+
+### Common Questions Covered:
+- **Speed concerns** → Show time savings data
+- **Legacy code challenges** → Start with new features
+- **Team adoption** → Begin with volunteers
+- **Tool selection** → Use what fits your stack
+
+---
+
+## 🚀 Your TDD Transformation Starts Now
+
+### The Promise:
+Transform from **"I hope this works"** to **"I know this works"**
+
+### Remember:
+- **Start small**, build confidence
+- **Focus on behavior**, not implementation
+- **Test-drive your design** decisions
+- **Share your wins** with the team
+
+### The Ultimate Goal:
+**Happy developers building reliable software with confidence**
+
+---
+
+**Thank you! Let's discuss your TDD journey!**
 
