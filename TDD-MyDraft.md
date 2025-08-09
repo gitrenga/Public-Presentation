@@ -106,33 +106,7 @@ TO:   "How will I know when it's solved?"
 
 ---
 
-## 📊 TDD Success Stories: Real Impact
-**(3 minutes)**
-
-### Industry Data & Real Results:
-
-**📈 Microsoft Study (2008-2012):**
-- 15-35% increase in development time initially
-- 40-90% decrease in defect density
-- **ROI: 2-3x within 6 months**
-
-**🏢 IBM Case Study:**
-- 50% reduction in production defects
-- 15% improvement in development productivity
-- 25% faster time to market for new features
-
-**💰 Business Impact:**
-- **Defect Cost**: 10x cheaper to fix in development vs production
-- **Developer Confidence**: 85% report higher confidence in changes
-- **Technical Debt**: 60% reduction in code complexity
-
-### 🎯 What This Means for Your Organization:
-- **Developers**: Less debugging, more building
-- **Leads**: Predictable delivery, fewer fire drills
-- **Managers**: Lower maintenance costs, faster features
-- **Architects**: Better design, cleaner interfaces
-
-## 🏗️ Beyond Code: TDD Principles in Operations
+     ## 🏗️ Beyond Code: TDD Principles in Operations
 **(7 minutes)**
 
 ### 🌟 TDD is a Design Philosophy, Not Just Testing
@@ -306,6 +280,34 @@ assertTrue(result.isEmailValid());
 
 **If YES → Use TDD**
 
+---
+
+## 📊 TDD Success Stories: Real Impact
+**(3 minutes)**
+
+### Industry Data & Real Results:
+
+**📈 Microsoft Study (2008-2012):**
+- 15-35% increase in development time initially
+- 40-90% decrease in defect density
+- **ROI: 2-3x within 6 months**
+
+**🏢 IBM Case Study:**
+- 50% reduction in production defects
+- 15% improvement in development productivity
+- 25% faster time to market for new features
+
+**💰 Business Impact:**
+- **Defect Cost**: 10x cheaper to fix in development vs production
+- **Developer Confidence**: 85% report higher confidence in changes
+- **Technical Debt**: 60% reduction in code complexity
+
+### 🎯 What This Means for Your Organization:
+- **Developers**: Less debugging, more building
+- **Leads**: Predictable delivery, fewer fire drills
+- **Managers**: Lower maintenance costs, faster features
+- **Architects**: Better design, cleaner interfaces
+  
 ---
 
 ## 🚀 Organizational Adoption Strategy
