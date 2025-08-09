@@ -71,27 +71,34 @@
 
 ### Starting Simple: Addition Function
 
-```javascript
+```java
 // Step 1: RED - Write failing test
-describe('Calculator', () => {
-  it('should add two numbers', () => {
-    expect(add(2, 3)).toBe(5);
-  });
-});
-
-// Step 2: GREEN - Minimal implementation
-function add(a, b) {
-  return 5; // Hardcoded to pass
+@Test
+public void shouldAddTwoNumbers() {
+    Calculator calculator = new Calculator();
+    assertEquals(5, calculator.add(2, 3));
 }
 
-// Step 3: Add another test
-it('should add different numbers', () => {
-  expect(add(1, 1)).toBe(2);
-});
+// Step 2: GREEN - Minimal implementation
+public class Calculator {
+    public int add(int a, int b) {
+        return 5; // Hardcoded to pass
+    }
+}
+
+// Step 3: Add another test to force generalization
+@Test
+public void shouldAddDifferentNumbers() {
+    Calculator calculator = new Calculator();
+    assertEquals(2, calculator.add(1, 1));
+    assertEquals(7, calculator.add(3, 4));
+}
 
 // Step 4: GREEN - Proper implementation
-function add(a, b) {
-  return a + b;
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
 }
 
 // Step 5: REFACTOR (if needed)
@@ -106,8 +113,153 @@ function add(a, b) {
 
 ---
 
+## 🏗️ Beyond Code: ODD (Operations-Driven Development)
+**(6 minutes)**
+
+### TDD Principles Apply Beyond Just Code:
+
+**🎯 The Big Picture:**
+TDD is not just about unit tests - it's a mindset that extends to:
+- **Environment setup**
+- **Platform configuration** 
+- **DevOps pipelines**
+- **Architecture decisions**
+- **Operations monitoring**
+
+### Testable vs Non-Testable Scenarios
+
+**❌ Non-Testable Approach:**
+```java
+// Hard to test - direct external dependencies
+public class OrderService {
+    public void processOrder(Order order) {
+        // Direct database call
+        database.save(order);
+        // Direct email service call  
+        emailService.sendConfirmation(order.getEmail());
+        // Direct payment processing
+        paymentGateway.charge(order.getAmount());
+    }
+}
+```
+
+**✅ Testable Approach:**
+```java
+// Easy to test - dependency injection
+public class OrderService {
+    private final OrderRepository repository;
+    private final EmailService emailService;
+    private final PaymentService paymentService;
+    
+    public OrderService(OrderRepository repository, 
+                       EmailService emailService,
+                       PaymentService paymentService) {
+        this.repository = repository;
+        this.emailService = emailService;
+        this.paymentService = paymentService;
+    }
+    
+    public OrderResult processOrder(Order order) {
+        repository.save(order);
+        emailService.sendConfirmation(order.getEmail());
+        return paymentService.charge(order.getAmount());
+    }
+}
+
+// Now we can test with mocks/stubs
+@Test
+public void shouldProcessOrderSuccessfully() {
+    // Given
+    OrderRepository mockRepo = mock(OrderRepository.class);
+    EmailService mockEmail = mock(EmailService.class);
+    PaymentService mockPayment = mock(PaymentService.class);
+    
+    when(mockPayment.charge(100.0)).thenReturn(PaymentResult.success());
+    
+    OrderService service = new OrderService(mockRepo, mockEmail, mockPayment);
+    
+    // When
+    OrderResult result = service.processOrder(new Order(100.0));
+    
+    // Then
+    assertTrue(result.isSuccess());
+    verify(mockRepo).save(any(Order.class));
+    verify(mockEmail).sendConfirmation(anyString());
+}
+```
+
+### ODD: The Bigger Testing Picture
+
+**🔧 Infrastructure Testing:**
+```java
+// Test your Docker containers
+@Test
+public void applicationShouldStartInContainer() {
+    try (GenericContainer<?> app = new GenericContainer<>("myapp:latest")
+            .withExposedPorts(8080)) {
+        app.start();
+        assertTrue(app.isRunning());
+        
+        // Test health endpoint
+        String response = given()
+            .port(app.getMappedPort(8080))
+            .when()
+            .get("/health")
+            .then()
+            .statusCode(200)
+            .extract().body().asString();
+            
+        assertEquals("UP", response);
+    }
+}
+```
+
+**🚀 Pipeline Testing:**
+```java
+// Test your deployment pipeline
+@Test  
+public void deploymentPipelineShouldWork() {
+    // Test each stage can be executed
+    assertTrue(buildStage.execute());
+    assertTrue(testStage.execute());
+    assertTrue(deployStage.execute());
+    
+    // Verify end-to-end flow
+    PipelineResult result = pipeline.run();
+    assertEquals(PipelineStatus.SUCCESS, result.getStatus());
+}
+```
+
+**📊 Architecture Decision Testing:**
+```java
+// Test architectural constraints
+@Test
+public void servicesShouldNotHaveCircularDependencies() {
+    ArchRule rule = classes()
+        .that().resideInPackage("com.myapp.service..")
+        .should().not().dependOnClassesThat()
+        .resideInPackage("com.myapp.service..");
+        
+    rule.check(importedClasses);
+}
+```
+
+**🎯 Key ODD Scenarios to Test:**
+
+1. **Long Running Processes** - Container health, graceful shutdown
+2. **Parallel vs Sequential Execution** - Race conditions, deadlocks  
+3. **Code & Dependency Paths** - Strategy pattern implementations
+4. **Cache vs Database** - Consistency, fallback mechanisms
+5. **Encryption Before Persistence** - Data security validation
+6. **External Calls** - HTTP timeouts, retries, circuit breakers
+7. **Garbage Collection** - Memory leak detection
+8. **DORA Metrics** - Deployment frequency, lead time testing
+9. **Architecture Constraints** - Dependency rules, layer violations
+
+---
+
 ## 🏗️ Testing Strategy That Works
-**(8 minutes)**
+**(6 minutes)**
 
 ### The Test Pyramid (Simplified)
 
@@ -140,17 +292,18 @@ function add(a, b) {
 ---
 
 ## ⚠️ Common TDD Pitfalls (Anti-Patterns)
-**(5 minutes)**
+**(4 minutes)**
 
 ### 🚨 Don't Do These:
 
 **❌ Testing Implementation Details**
-```javascript
+```java
 // BAD: Testing internal structure
-expect(userService.validateEmail).toHaveBeenCalled();
+verify(userService).validateEmail(anyString());
 
-// GOOD: Testing behavior
-expect(result.isValid).toBe(true);
+// GOOD: Testing behavior  
+User result = userService.createUser("test@example.com");
+assertTrue(result.isValid());
 ```
 
 **❌ Ice Cream Cone Testing**
@@ -211,9 +364,9 @@ TO:   "How will I know when it's solved?"
 5. **Refactor fearlessly** - Tests have your back
 
 ### Essential Tools:
+- **Java**: JUnit 5, Mockito, TestContainers
 - **JavaScript**: Jest, Vitest
-- **Java**: JUnit, TestNG
-- **Python**: pytest, unittest
+- **Python**: pytest, unittest  
 - **C#**: NUnit, xUnit
 
 ### Resources:
