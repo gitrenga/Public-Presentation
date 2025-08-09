@@ -268,3 +268,8 @@ public void servicesShouldNotHaveCircularDependencies() {
 10. **NFR** - HA,Fault tolerance etc..
 
 ---
+
+## 🏗️ Testing Strategy That Works
+
+<img width="692" height="348" alt="Test-Pyramid" src="https://github.com/user-attachments/assets/58078528-c1ab-4c58-853b-5bab45bacf36" />
+
