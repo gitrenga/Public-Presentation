@@ -375,23 +375,6 @@ TO:   "How will I know when it's solved?"
 - **Security**: Azure Security Center compliance tests
 - **Deployment**: Blue-Green deployments with health checks
 
-### 📚 Resources & Next Steps:
-- 📖 **Books**: "Test Driven Development" - Kent Beck, "Growing Object-Oriented Software" - Freeman & Pryce
-- 🔗 **GitHub**: Practical examples with Java + React + Azure setup
-- 🏗️ **Azure DevOps Labs**: Hands-on TDD pipeline exercises
-- 🌐 **Community**: Java Testing Discord, React Testing Library community
-
----
-
-## 🎪 Interactive Poll
-
-**Quick show of hands:**
-1. Who has tried TDD before?
-2. What's your biggest testing challenge?
-3. Who will try TDD on their next feature?
-
----
-
 ## ❓ Q&A
 **(5 minutes)**
 
