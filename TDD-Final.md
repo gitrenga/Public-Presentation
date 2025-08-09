@@ -192,57 +192,63 @@ public void shouldProcessOrderSuccessfully() {
 
 **🔧 Infrastructure Testing:**
 ```java
-// Test your Docker containers
+// Test your Azure deployment with TestContainers
 @Test
-public void applicationShouldStartInContainer() {
+public void applicationShouldStartInAzureContainer() {
     try (GenericContainer<?> app = new GenericContainer<>("myapp:latest")
-            .withExposedPorts(8080)) {
+            .withExposedPorts(8080)
+            .withEnv("AZURE_STORAGE_CONNECTION_STRING", azureConnectionString)) {
         app.start();
         assertTrue(app.isRunning());
         
-        // Test health endpoint
-        String response = given()
+        // Test Azure health endpoint
+        Response response = given()
             .port(app.getMappedPort(8080))
             .when()
             .get("/health")
             .then()
             .statusCode(200)
-            .extract().body().asString();
+            .extract().response();
             
-        assertEquals("UP", response);
+        assertEquals("UP", response.jsonPath().getString("status"));
+        assertNotNull(response.jsonPath().getString("azureStorage.status"));
     }
 }
 ```
 
 **🚀 Pipeline Testing (DORA Metrics Focus):**
 ```java
-// Test your deployment pipeline against DORA metrics
+// Test your Azure DevOps pipeline against DORA metrics
 @Test  
-public void deploymentPipelineShouldMeetDORAMetrics() {
+public void azureDevOpsPipelineShouldMeetDORAMetrics() {
     long startTime = System.currentTimeMillis();
     
-    // Execute pipeline stages
-    PipelineResult result = pipeline.run();
+    // Trigger Azure pipeline via REST API
+    AzureDevOpsClient client = new AzureDevOpsClient(personalAccessToken);
+    PipelineRun run = client.triggerPipeline("MyProject", pipelineId);
     
+    // Wait for completion and measure
+    PipelineResult result = client.waitForCompletion(run.getId());
     long deploymentTime = System.currentTimeMillis() - startTime;
     
-    // Test Lead Time (Code to Production)
+    // Test Lead Time for Changes (Code commit to production)
     assertTrue("Lead time should be < 1 hour", 
                deploymentTime < Duration.ofHours(1).toMillis());
     
     // Test Deployment Frequency capability
-    assertTrue("Pipeline should support multiple daily deploys", 
-               pipeline.canHandleConcurrentDeployments());
+    List<PipelineRun> recentRuns = client.getRecentRuns(24); // Last 24 hours
+    assertTrue("Should support multiple daily deployments", 
+               recentRuns.size() >= 3);
     
     // Test Mean Time to Recovery
-    if (result.hasFailed()) {
-        long recoveryTime = pipeline.rollback().getRecoveryTime();
+    if (result.getStatus() == PipelineStatus.FAILED) {
+        Duration recoveryTime = measureRecoveryTime(client, run);
         assertTrue("MTTR should be < 15 minutes", 
-                   recoveryTime < Duration.ofMinutes(15).toMillis());
+                   recoveryTime.toMinutes() < 15);
     }
     
-    // Test Change Failure Rate
-    double failureRate = pipeline.getMetrics().getChangeFailureRate();
+    // Test Change Failure Rate from Azure DevOps analytics
+    double failureRate = client.getChangeFailureRate(30); // Last 30 days
     assertTrue("Change failure rate should be < 15%", failureRate < 0.15);
 }
 ```
@@ -380,16 +386,36 @@ TO:   "How will I know when it's solved?"
 4. **Notice the confidence** - Feel the safety net
 5. **Refactor fearlessly** - Tests have your back
 
-### Essential Tools:
-- **Java**: JUnit 5, Mockito, TestContainers
-- **JavaScript**: Jest, Vitest
-- **Python**: pytest, unittest  
-- **C#**: NUnit, xUnit
+### 🛠️ Complete TDD Toolchain for Modern Development:
 
-### Resources:
-- 📖 "Test Driven Development" - Kent Beck
-- 🔗 GitHub: Your code examples and exercises
-- 🌐 Community: Join TDD practitioners online
+**☕ Java Ecosystem:**
+- **Unit Testing**: JUnit 5 + AssertJ (fluent assertions)
+- **Mocking**: Mockito (behavior verification)
+- **Integration Testing**: TestContainers (real databases, message queues)
+- **Architecture Testing**: ArchUnit (dependency rules, layer violations)
+- **Build**: Maven Surefire/Failsafe plugins
+- **Coverage**: JaCoCo with quality gates
+
+**⚛️ React.js Frontend:**
+- **Unit Testing**: Vitest + Testing Library (component behavior)
+- **E2E Testing**: Playwright (cross-browser automation)
+- **Visual Testing**: Storybook + Chromatic (UI regression)
+- **API Mocking**: MSW (Mock Service Worker)
+- **Performance**: Lighthouse CI (automated audits)
+
+**☁️ Azure DevOps & Cloud:**
+- **Pipeline Testing**: Azure DevOps REST API + Custom tasks
+- **Infrastructure**: ARM Templates + Azure Resource Manager tests
+- **Monitoring**: Application Insights + Custom telemetry
+- **Load Testing**: Azure Load Testing service
+- **Security**: Azure Security Center compliance tests
+- **Deployment**: Blue-Green deployments with health checks
+
+### 📚 Resources & Next Steps:
+- 📖 **Books**: "Test Driven Development" - Kent Beck, "Growing Object-Oriented Software" - Freeman & Pryce
+- 🔗 **GitHub**: Practical examples with Java + React + Azure setup
+- 🏗️ **Azure DevOps Labs**: Hands-on TDD pipeline exercises
+- 🌐 **Community**: Java Testing Discord, React Testing Library community
 
 ---
 
