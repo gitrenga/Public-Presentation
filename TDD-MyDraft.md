@@ -529,19 +529,6 @@ assertTrue(result.isEmailValid());
 
 ---
 
-## 🎯 Essential Tools Reference
-**(Quick Reference - In Backup)**
-
-### Core TDD Stack:
-- **Java**: JUnit 5 + Mockito + AssertJ
-- **JavaScript**: Vitest + Testing Library + MSW
-- **Integration**: TestContainers + WireMock
-- **CI/CD**: Azure DevOps + JaCoCo + Playwright
-
-*[Detailed toolchain matrices moved to backup slides]*
-
----
-
 ## ❓ Q&A & Interactive Discussion
 **(5 minutes)**
 
