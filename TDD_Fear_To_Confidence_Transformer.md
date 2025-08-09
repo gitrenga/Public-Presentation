@@ -17,6 +17,7 @@
 > *"TDD didn't just change my code - it changed my entire relationship with programming"*
 >
 ---
+
 ## 🔄 What is TDD?
 
 <img width="401" height="231" alt="TDD-loop" src="https://github.com/user-attachments/assets/37926e82-eee9-46d9-8e92-797c1cc97517" />
