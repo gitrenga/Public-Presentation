@@ -87,10 +87,13 @@ TO:   "How will I know when it's solved?"
 public class OrderService {
     public void processOrder(Order order) {
         // Direct database call
+        Database database = new database();
         database.save(order);
-        // Direct email service call  
+        // Direct email service call
+        EmailService emailService = new EmailService();
         emailService.sendConfirmation(order.getEmail());
         // Direct payment processing
+        paymentGateway paymentGateway = PaymentGateway.init();
         paymentGateway.charge(order.getAmount());
     }
 }
