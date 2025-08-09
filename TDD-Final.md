@@ -214,19 +214,36 @@ public void applicationShouldStartInContainer() {
 }
 ```
 
-**🚀 Pipeline Testing:**
+**🚀 Pipeline Testing (DORA Metrics Focus):**
 ```java
-// Test your deployment pipeline
+// Test your deployment pipeline against DORA metrics
 @Test  
-public void deploymentPipelineShouldWork() {
-    // Test each stage can be executed
-    assertTrue(buildStage.execute());
-    assertTrue(testStage.execute());
-    assertTrue(deployStage.execute());
+public void deploymentPipelineShouldMeetDORAMetrics() {
+    long startTime = System.currentTimeMillis();
     
-    // Verify end-to-end flow
+    // Execute pipeline stages
     PipelineResult result = pipeline.run();
-    assertEquals(PipelineStatus.SUCCESS, result.getStatus());
+    
+    long deploymentTime = System.currentTimeMillis() - startTime;
+    
+    // Test Lead Time (Code to Production)
+    assertTrue("Lead time should be < 1 hour", 
+               deploymentTime < Duration.ofHours(1).toMillis());
+    
+    // Test Deployment Frequency capability
+    assertTrue("Pipeline should support multiple daily deploys", 
+               pipeline.canHandleConcurrentDeployments());
+    
+    // Test Mean Time to Recovery
+    if (result.hasFailed()) {
+        long recoveryTime = pipeline.rollback().getRecoveryTime();
+        assertTrue("MTTR should be < 15 minutes", 
+                   recoveryTime < Duration.ofMinutes(15).toMillis());
+    }
+    
+    // Test Change Failure Rate
+    double failureRate = pipeline.getMetrics().getChangeFailureRate();
+    assertTrue("Change failure rate should be < 15%", failureRate < 0.15);
 }
 ```
 
