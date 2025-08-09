@@ -265,10 +265,8 @@ public void servicesShouldNotHaveCircularDependencies() {
 4. **One assertion per concept** - Clear failure messages
 
 ---
----
-
 ## ⚠️ Common TDD Pitfalls (Anti-Patterns)
-**(4 minutes)**
+
 
 ### 🚨 Don't Do These:
 
@@ -332,7 +330,6 @@ assertTrue(result.isValid());
 ---
 
 ## 📊 TDD Success Stories: Real Impact
-**(3 minutes)**
 
 ### Industry Data & Real Results:
 
@@ -360,7 +357,7 @@ assertTrue(result.isValid());
 ---
 
 ## 🚀 Organizational Adoption Strategy
-**(4 minutes)**
+
 
 ### 🎯 Role-Specific Benefits & Actions:
 
@@ -407,7 +404,7 @@ assertTrue(result.isValid());
 ---
 
 ## 🛠️ Getting Started Monday: Your Action Plan
-**(3 minutes)**
+
 
 ### 🎯 Choose Your Adventure:
 
@@ -435,7 +432,7 @@ assertTrue(result.isValid());
 ---
 
 ## 📊 Key Takeaways by Role
-**(2 minutes)**
+
 
 ### 💻 **Developers**: Your Daily Toolkit
 - TDD = Design technique first, testing second
@@ -460,7 +457,7 @@ assertTrue(result.isValid());
 ---
 
 ## ❓ Q&A & Interactive Discussion
-**(5 minutes)**
+
 
 ### 🗳️ Final Poll: What's Your Next Step?
 - Start TDD on current feature
