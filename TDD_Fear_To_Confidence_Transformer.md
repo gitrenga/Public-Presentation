@@ -4,7 +4,6 @@
 
 ---
 ## 👨‍💻 About Me & My TDD Journey
-**(5 minutes)**
 
 - **Rengasamy Venkittaraman**
 - **18 Years Experience | Current Role: Architect**
