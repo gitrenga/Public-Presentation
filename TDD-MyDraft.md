@@ -106,7 +106,7 @@ TO:   "How will I know when it's solved?"
 
 ---
 
-     ## 🏗️ Beyond Code: TDD Principles in Operations
+## 🏗️ Beyond Code: TDD Principles in Operations
 **(7 minutes)**
 
 ### 🌟 TDD is a Design Philosophy, Not Just Testing
