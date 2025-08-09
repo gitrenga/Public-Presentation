@@ -2,7 +2,7 @@
 ## Transforming Fear into Confidence
 
 ### 🎯 Core Content Sections:
-- [🚀 Opening & Personal Journey](## 👨‍💻 About Me & My TDD Journey) *(3 min)*
+- [🚀 Opening & Personal Journey](# 👨‍💻 About Me & My TDD Journey) *(3 min)*
 - [🔄 TDD Foundation](#tdd-foundation) *(4 min)*  
 - [💻 Live Coding Demo](#live-coding-demo) *(8 min)*
 - [💚 Pain → Transformation](#pain-transformation) *(6 min)*
