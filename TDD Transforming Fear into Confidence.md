@@ -2,23 +2,20 @@
 ## Transforming Fear into Confidence
  
   ### 🎯 Core Content Sections:
-- [🚀 Opening & Personal Journey] *(3 min)*
-- [🔄 TDD Foundation] *(4 min)*  
-- [💻 Live Coding Demo] *(15 min)*
-- [💚 Pain → Transformation] *(10 min)*
+- [🚀 Opening & Personal Journey] 
+- [🔄 TDD Foundation] 
+- [💻 Live Coding Demo]
+- [💚 Pain → Transformation] 
 
 ### 🏗️ Advanced Concepts:
-- [🏗️ TDD Beyond Code] *(8 min)*
-- [📊 Testing Strategy]*(5 min)*
-- [⚠️ Common Pitfalls] *(4 min)*
+- [🏗️ TDD Beyond Code] 
+- [📊 Testing Strategy]
+- [⚠️ Common Pitfalls] 
 
 ### 🚀 Implementation:
-- [🚀 Organizational Adoption] *(3 min)*
-- [🛠️ Getting Started Monday] *(3 min)*
-- [❓ Q&A & Wrap-up] *(5 min)*
-  
-  </div>
-</div>
+- [🚀 Organizational Adoption] 
+- [🛠️ Getting Started Monday] 
+- [❓ Q&A & Wrap-up] 
 
 
 ---
@@ -186,7 +183,7 @@ public void shouldProcessOrderSuccessfully() {
 <img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
 
 ---
-
+ 
 ### TDD Principles Apply Beyond Just Code:
 
 ### 🌟 TDD is a Design Philosophy, Not Just Testing
