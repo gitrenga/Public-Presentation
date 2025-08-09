@@ -423,7 +423,7 @@ Transform from **"I hope this works"** to **"I know this works"**
 
 **Thank you! Questions?**
 
-🔗 Contact: [https://www.linkedin.com/feed/]  
+🔗 Contact: [Linked In]   (https://www.linkedin.com/in/rengasamy-venkittaraman/)
 
 ---
 
