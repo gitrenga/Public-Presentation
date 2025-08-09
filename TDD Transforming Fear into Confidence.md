@@ -4,8 +4,9 @@
 
 
 <div style="display: flex; gap: 20px;">
-  <img src="your-image-url.jpg" alt="Description of your image" style="max-width: 50%;">
-  <div>
+  <img width="121" height="460" alt="Agenda" src="https://github.com/user-attachments/assets/eb16fec1-9084-46a1-b1cb-56bbc3761f3d" />
+
+ <div>
     
   ### 🎯 Core Content Sections:
 - [🚀 Opening & Personal Journey] *(3 min)*
