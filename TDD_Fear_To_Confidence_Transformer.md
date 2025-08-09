@@ -154,26 +154,10 @@ public void shouldProcessOrderSuccessfully() {
 
 
 ### 🌟 TDD is a Design Philosophy, Not Just Testing
-
-The same principles that make code testable make systems:
-- **More modular**
-- **Easier to deploy**
-- **Simpler to monitor**
-- **Faster to debug**
-
 ### From Code to Systems: The Natural Evolution
 
-**Testable Code Principles:**
-- Dependency injection
-- Single responsibility
-- Clear interfaces
-- Predictable behavior
+<img width="771" height="531" alt="Test-Infra" src="https://github.com/user-attachments/assets/6e196ef0-e640-4882-bc11-bea5db4ccce5" />
 
-**↓ Applied to Systems:**
-- Container-based deployment
-- Service-oriented architecture
-- API-first design
-- Observable operations
   
 
 ### Beyond Functional Test
