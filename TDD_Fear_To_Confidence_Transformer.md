@@ -7,6 +7,7 @@
 
 - **Rengasamy Venkittaraman**
 - **18 Years Experience | Current Role: Architect**
+- 🔗 **Connect**: [LinkedIn](https://www.linkedin.com/in/rengasamy-venkittaraman/)
 - **The Accidental Engineer**
   - Late access to computers & software
   - Playing constant "catch up" on knowledge
@@ -16,3 +17,4 @@
 > *"TDD didn't just change my code - it changed my entire relationship with programming"*
 >
 ---
+## 🔄 What is TDD?
