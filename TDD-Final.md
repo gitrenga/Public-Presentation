@@ -98,9 +98,6 @@ TO:   "How will I know when it's solved?"
 - Problem: Outdated docs
 - **TDD Solution**: Executable specifications that never lie
 
-## 🏗️ Beyond Code: ODD (Operations-Driven Development)
-**(6 minutes)**
-
 ---
 
 ### Testable vs Non-Testable Scenarios
@@ -285,6 +282,7 @@ public void servicesShouldNotHaveCircularDependencies() {
 7. **Garbage Collection** - Memory leak detection
 8. **DORA Metrics** - Deployment frequency, lead time testing
 9. **Architecture Constraints** - Dependency rules, layer violations
+10. **NFR** - HA,Fault tolerance etc..
 
 ---
 
