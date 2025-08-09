@@ -131,23 +131,74 @@ The same principles that make code testable make systems:
 - API-first design
 - Observable operations
 
-### 🎯 Testable vs Non-Testable Architecture
+### 🎯 Testable vs Non-Testable Code & Architecture
 
-**❌ Hard to Test:**
-```
-Frontend → Monolith → Database
-           ↓
-      External APIs
-```
 *Tightly coupled, hard to isolate, difficult to test*
 
-**✅ Easy to Test:**
-```
-Frontend → API Gateway → Service A → Database A
-                      → Service B → Database B
-                      → Service C → External API
-```
 *Loosely coupled, easy to mock, simple to test*
+
+**❌ Non-Testable Approach:**
+```java
+// Hard to test - direct external dependencies
+public class OrderService {
+    public void processOrder(Order order) {
+        // Direct database call
+        database.save(order);
+        // Direct email service call  
+        emailService.sendConfirmation(order.getEmail());
+        // Direct payment processing
+        paymentGateway.charge(order.getAmount());
+    }
+}
+```
+
+**✅ Testable Approach:**
+```java
+// Easy to test - dependency injection
+public class OrderService {
+    private final OrderRepository repository;
+    private final EmailService emailService;
+    private final PaymentService paymentService;
+    
+    public OrderService(OrderRepository repository, 
+                       EmailService emailService,
+                       PaymentService paymentService) {
+        this.repository = repository;
+        this.emailService = emailService;
+        this.paymentService = paymentService;
+    }
+    
+    public OrderResult processOrder(Order order) {
+        repository.save(order);
+        emailService.sendConfirmation(order.getEmail());
+        return paymentService.charge(order.getAmount());
+    }
+}
+
+// Now we can test with mocks/stubs
+@Test
+public void shouldProcessOrderSuccessfully() {
+    // Given
+    OrderRepository mockRepo = mock(OrderRepository.class);
+    EmailService mockEmail = mock(EmailService.class);
+    PaymentService mockPayment = mock(PaymentService.class);
+    
+    when(mockPayment.charge(100.0)).thenReturn(PaymentResult.success());
+    
+    OrderService service = new OrderService(mockRepo, mockEmail, mockPayment);
+    
+    // When
+    OrderResult result = service.processOrder(new Order(100.0));
+    
+    // Then
+    assertTrue(result.isSuccess());
+    verify(mockRepo).save(any(Order.class));
+    verify(mockEmail).sendConfirmation(anyString());
+}
+```
+**❌ EASILY Non-Testable Architecture**              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **✅ Testable Architecture** 
+
+<img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
 
 ### 🔧 Practical Examples:
 
