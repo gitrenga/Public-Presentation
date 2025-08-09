@@ -1,13 +1,6 @@
 # Test-Driven Development (TDD)
 ## Transforming Fear into Confidence
-
-
-
-<div style="display: flex; gap: 20px;">
-  <img width="121" height="460" alt="Agenda" src="https://github.com/user-attachments/assets/eb16fec1-9084-46a1-b1cb-56bbc3761f3d" />
-
- <div>
-    
+ 
   ### 🎯 Core Content Sections:
 - [🚀 Opening & Personal Journey] *(3 min)*
 - [🔄 TDD Foundation] *(4 min)*  
