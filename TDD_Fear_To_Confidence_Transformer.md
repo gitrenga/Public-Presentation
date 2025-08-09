@@ -303,15 +303,8 @@ assertTrue(result.isValid());
 - **Refactor test code** - Keep it clean like production code
 
 ---
-## 🚦 When to Use TDD (And When Not To)
+## 🚦 When NOT to Use TDD
 **(3 minutes)**
-
-### ✅ Perfect for TDD:
-- **Business logic** - Your core value proposition
-- **Complex algorithms** - Multiple edge cases
-- **API endpoints** - Clear contracts
-- **Bug fixes** - Write failing test, then fix
-- **Critical paths** - Cannot afford to break
 
 ### ⏸️ Skip TDD For:
 - **Spike/exploration code** - You're learning
