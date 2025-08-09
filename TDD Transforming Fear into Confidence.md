@@ -8,7 +8,7 @@
 - [💚 Pain → Transformation] *(6 min)*
 
 ### 🏗️ Advanced Concepts:
-- [🏗️ Beyond Code: ODD] *(8 min)*
+- [🏗️ TDD Beyond Code] *(8 min)*
 - [📊 Testing Strategy]*(5 min)*
 - [⚠️ Common Pitfalls] *(4 min)*
 
