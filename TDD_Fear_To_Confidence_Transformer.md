@@ -29,7 +29,7 @@ TO:   "How will I know when it's solved?"
 ```
 ---
 ## 💻 Live Coding Demo: Building with TDD
-**(10 minutes)**
+
 
 ### 🎭 Myth vs Reality Check
 
