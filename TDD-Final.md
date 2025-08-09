@@ -2,20 +2,20 @@
 ## Transforming Fear into Confidence
 
 ### 🎯 Core Content Sections:
-- [🚀 Opening & Personal Journey](# 👨‍💻 About Me & My TDD Journey) *(3 min)*
-- [🔄 TDD Foundation](#tdd-foundation) *(4 min)*  
-- [💻 Live Coding Demo](#live-coding-demo) *(8 min)*
-- [💚 Pain → Transformation](#pain-transformation) *(6 min)*
+- [🚀 Opening & Personal Journey] *(3 min)*
+- [🔄 TDD Foundation] *(4 min)*  
+- [💻 Live Coding Demo] *(8 min)*
+- [💚 Pain → Transformation] *(6 min)*
 
 ### 🏗️ Advanced Concepts:
-- [🏗️ Beyond Code: ODD](#beyond-code-odd) *(8 min)*
-- [📊 Testing Strategy](#testing-strategy) *(5 min)*
-- [⚠️ Common Pitfalls](#common-pitfalls) *(4 min)*
+- [🏗️ Beyond Code: ODD] *(8 min)*
+- [📊 Testing Strategy]*(5 min)*
+- [⚠️ Common Pitfalls] *(4 min)*
 
 ### 🚀 Implementation:
-- [🚀 Organizational Adoption](#organizational-adoption) *(8 min)*
-- [🛠️ Getting Started Monday](#getting-started-monday) *(4 min)*
-- [❓ Q&A & Wrap-up](#qa-wrap-up) *(10 min)*
+- [🚀 Organizational Adoption] *(8 min)*
+- [🛠️ Getting Started Monday] *(4 min)*
+- [❓ Q&A & Wrap-up] *(10 min)*
 
 ---
 
