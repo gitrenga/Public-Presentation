@@ -439,3 +439,79 @@ Unit Tests → Component Tests → Contract Tests → E2E Tests
   Fast &         Service      API Contracts  Full System
   Reliable      Behavior      Stay Aligned    Working
 ```
+
+## 🌱 Spring Project TDD Toolkit
+
+### Testing Tools Matrix by Layer & Intent
+
+| Testing Layer | Primary Tools | Secondary Tools | Test Intent | Configuration | Example Use Cases | Coverage Target |
+|---------------|---------------|-----------------|-------------|---------------|-------------------|-----------------|
+| **Unit Tests (70%)** | JUnit 5, TestNG | Mockito, AssertJ, Hamcrest | Individual component logic testing | `@Test`, `@Mock`, `@InjectMocks`, `@DataProvider` | Service methods, business logic, utility functions | Fast feedback loop |
+| **Integration Tests (20%)** | Spring Boot Test, TestNG | WireMock, TestContainers, H2, DBUnit | Component interaction within app | `@SpringBootTest`, `@AutoConfigureTestDatabase`, `@AutoConfigureWireMock` | Repository layer, service integration, API endpoints | Components working together |
+| **Contract Tests** | Spring Cloud Contract, WireMock, Pact | TestNG, MockMvc | API contract validation | Contract DSL, `@AutoConfigureWireMock`, stub mappings | External service contracts, API versioning | Service boundaries |
+| **Component Tests** | Spring Boot Test, TestNG | WireMock, TestContainers | Service in isolation | `@SpringBootTest(webEnvironment = MOCK)` | Microservices, modules, bounded contexts | Service behavior |
+| **End-to-End Tests (10%)** | Selenium, TestNG, Cucumber | WireMock, TestContainers, Spring Boot Test | Complete workflow validation | `@SpringBootTest(webEnvironment = RANDOM_PORT)` | Critical business flows, user journeys | System integration |
+
+### Specialized Testing Categories
+
+| Category | Primary Tools | Secondary Tools | Purpose | Integration Pattern | When to Use |
+|----------|---------------|-----------------|---------|-------------------|-------------|
+| **Repository Testing** | Spring Data Test, JUnit 5 | TestContainers, H2, DBUnit | Data access layer validation | `@DataJpaTest`, `@AutoConfigureTestDatabase` | CRUD operations, custom queries, transactions |
+| **Web Layer Testing** | Spring MVC Test, TestNG | MockMvc, WebTestClient, WireMock | Controller and web layer testing | `@WebMvcTest`, `@AutoConfigureMockMvc` | REST endpoints, request/response mapping |
+| **Security Testing** | Spring Security Test, JUnit 5 | MockMvc, TestNG | Authentication and authorization | `@WithMockUser`, `@WithAnonymousUser` | Role-based access, JWT validation, CSRF |
+| **Architecture Testing** | ArchUnit, JUnit 5 | TestNG | Architectural constraints validation | Custom rules, package scanning | Dependency rules, layer violations |
+| **Performance Testing** | JMeter, Gatling | Spring Boot Actuator, Micrometer | Load and performance validation | Custom configuration, metrics collection | API throughput, response times |
+
+### Azure DevOps & Cloud Testing
+
+| Testing Aspect | Primary Tools | Secondary Tools | Purpose | Configuration | DORA Metrics Focus |
+|----------------|---------------|-----------------|---------|---------------|-------------------|
+| **Pipeline Testing** | Azure DevOps REST API, JUnit 5 | TestNG, Custom tasks | CI/CD pipeline validation | Personal access tokens, API calls | Lead Time for Changes |
+| **Infrastructure Testing** | ARM Templates, TestContainers | Azure Resource Manager, JUnit 5 | Infrastructure as Code validation | Template validation, resource testing | Deployment Frequency |
+| **Monitoring Testing** | Application Insights, JUnit 5 | Custom telemetry, TestNG | Observability validation | Custom metrics, health checks | Mean Time to Recovery |
+| **Load Testing** | Azure Load Testing, JMeter | Gatling, performance counters | Scalability validation | Load test configuration | Change Failure Rate |
+| **Security Testing** | Azure Security Center, JUnit 5 | Compliance tests, TestNG | Security compliance validation | Security policies, vulnerability scans | Security posture |
+
+### Complete Spring Testing Setup
+
+| Build Phase | Tools | Configuration | Purpose |
+|-------------|-------|---------------|---------|
+| **Dependencies** | Maven/Gradle | `spring-boot-starter-test`, `testng`, `wiremock-jre8`, `testcontainers` | Test framework setup |
+| **Test Execution** | Maven Surefire/Failsafe | `testng.xml`, parallel execution, test groups | Test orchestration |
+| **Coverage Analysis** | JaCoCo | Quality gates, branch coverage, exclusions | Code coverage validation |
+| **Reporting** | TestNG Reports, Allure | HTML reports, test history, trends | Test result analysis |
+
+---
+
+## ⚛️ React.js Frontend TDD Toolkit
+
+### Testing Tools Matrix by Layer & Intent
+
+| Testing Layer | Primary Tools | Secondary Tools | Test Intent | Configuration | Example Use Cases | Coverage Target |
+|---------------|---------------|-----------------|-------------|---------------|-------------------|-----------------|
+| **Unit Tests (70%)** | Vitest, Jest | Testing Library, React Testing Library | Component logic & behavior testing | `vitest.config.js`, `@testing-library/react` | Component rendering, event handling, hooks | Individual components |
+| **Integration Tests (20%)** | Testing Library, Vitest | MSW (Mock Service Worker), Cypress | Component interaction testing | API mocking, component integration | Form submissions, data fetching, routing | Component collaboration |
+| **Visual Regression Tests** | Storybook, Chromatic | Percy, Applitools | UI consistency validation | `.storybook/main.js`, visual diff config | Design system components, responsive layouts | Visual consistency |
+| **E2E Tests (10%)** | Playwright, Cypress | TestCafe | Complete user journey testing | Cross-browser configuration, page objects | Critical user flows, business scenarios | Full application workflows |
+| **Performance Tests** | Lighthouse CI, Web Vitals | Bundlemon, webpack-bundle-analyzer | Performance validation | Lighthouse configuration, performance budgets | Core Web Vitals, bundle size, loading times | Performance metrics |
+
+### Specialized React Testing Categories
+
+| Category | Primary Tools | Secondary Tools | Purpose | Configuration | When to Use |
+|----------|---------------|-----------------|---------|---------------|-------------|
+| **Component Testing** | React Testing Library, Vitest | Enzyme (legacy), Jest | Individual React component testing | `@testing-library/react`, custom render | Props handling, state changes, lifecycle |
+| **Hook Testing** | React Hooks Testing Library, Vitest | Testing Library utilities | Custom hooks validation | `@testing-library/react-hooks` | Custom hook logic, state management |
+| **API Integration Testing** | MSW, Vitest | Nock, miragejs | API interaction testing | Service worker setup, request handlers | Data fetching, error handling, caching |
+| **Accessibility Testing** | Jest-axe, Testing Library | Pa11y, axe-core | A11y compliance validation | Accessibility rules, screen reader testing | WCAG compliance, keyboard navigation |
+| **State Management Testing** | Redux Toolkit, Zustand Testing | Recoil testing utilities | State management validation | Store configuration, action testing | Global state, complex state flows |
+
+### Frontend Build & CI/CD Testing
+
+| Testing Aspect | Primary Tools | Secondary Tools | Purpose | Configuration | Integration |
+|----------------|---------------|-----------------|---------|---------------|-------------|
+| **Build Testing** | Vite, Webpack | ESLint, Prettier | Build process validation | Build configuration, linting rules | Pre-commit hooks, CI pipeline |
+| **Bundle Analysis** | Webpack Bundle Analyzer, Bundlemon | Source Map Explorer | Bundle optimization | Size budgets, tree shaking analysis | Performance monitoring |
+| **Cross-Browser Testing** | Playwright, BrowserStack | Sauce Labs, LambdaTest | Browser compatibility | Browser matrix, device testing | Compatibility validation |
+| **Security Testing** | npm audit, Snyk | OWASP ZAP, retire.js | Vulnerability scanning | Security policies, dependency scanning | Security compliance |
+
+---
