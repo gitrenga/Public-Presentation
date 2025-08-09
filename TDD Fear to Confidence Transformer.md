@@ -148,7 +148,8 @@ public void shouldProcessOrderSuccessfully() {
 
 **❌ Not-So-Testable** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **✅ Testable** 
 
-<img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
+<img width="910" height="483" alt="CLEAN-ARCH" src="https://github.com/user-attachments/assets/fb6d8e26-f192-489b-80b2-36a81b73ab71" />
+
 
 ---
 ### TDD Principles Apply Beyond Just Code:
