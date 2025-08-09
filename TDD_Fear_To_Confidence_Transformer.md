@@ -48,8 +48,6 @@ TO:   "How will I know when it's solved?"
 - ✅ Refactoring became fearless
 ---
 ## 💔 The Pain → 💚 The Transformation
-**(7 minutes)**
-
 ### Before TDD: The Struggles
 
 **🔥 Fear of the Unknown**
@@ -76,3 +74,5 @@ TO:   "How will I know when it's solved?"
 - Problem: Outdated docs
 - **TDD Solution**: Executable specifications that never lie
 ---
+### Testable vs Non-Testable Scenarios
+<img width="1530" height="531" alt="Screenshot from 2025-08-09 15-17-17" src="https://github.com/user-attachments/assets/6a315fdf-3de3-4265-bc58-89b88d182ff2" />
