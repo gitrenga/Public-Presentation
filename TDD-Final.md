@@ -1,6 +1,22 @@
 # Test-Driven Development (TDD)
 ## Transforming Fear into Confidence
 
+### 🎯 Core Content Sections:
+- [🚀 Opening & Personal Journey](#opening-personal-journey) *(3 min)*
+- [🔄 TDD Foundation](#tdd-foundation) *(4 min)*  
+- [💻 Live Coding Demo](#live-coding-demo) *(8 min)*
+- [💚 Pain → Transformation](#pain-transformation) *(6 min)*
+
+### 🏗️ Advanced Concepts:
+- [🏗️ Beyond Code: ODD](#beyond-code-odd) *(8 min)*
+- [📊 Testing Strategy](#testing-strategy) *(5 min)*
+- [⚠️ Common Pitfalls](#common-pitfalls) *(4 min)*
+
+### 🚀 Implementation:
+- [🚀 Organizational Adoption](#organizational-adoption) *(8 min)*
+- [🛠️ Getting Started Monday](#getting-started-monday) *(4 min)*
+- [❓ Q&A & Wrap-up](#qa-wrap-up) *(10 min)*
+
 ---
 
 ## 👨‍💻 About Me & My TDD Journey
