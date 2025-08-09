@@ -472,6 +472,11 @@ assertTrue(result.isValid());
 - **Team adoption** → Begin with volunteers
 - **Tool selection** → Use what fits your stack
 
+### Questions to Ponder
+- How to Tell Test Before VS Test After from Testcase (Code) ?
+- How to Tell whether TDD is followed by seeing the code ?
+- TDD makes you write More/Less Code ?
+- Start with Question - What Test? How to Test? - Worth the Test?
 ---
 
 ## 🚀 Your TDD Transformation Starts Now
