@@ -66,44 +66,8 @@
 
 ---
 
-## 💻 Live Coding Demo: Calculator
+## 💻 Live Coding Demo: 
 **(12 minutes)**
-
-### Starting Simple: Addition Function
-
-```java
-// Step 1: RED - Write failing test
-@Test
-public void shouldAddTwoNumbers() {
-    Calculator calculator = new Calculator();
-    assertEquals(5, calculator.add(2, 3));
-}
-
-// Step 2: GREEN - Minimal implementation
-public class Calculator {
-    public int add(int a, int b) {
-        return 5; // Hardcoded to pass
-    }
-}
-
-// Step 3: Add another test to force generalization
-@Test
-public void shouldAddDifferentNumbers() {
-    Calculator calculator = new Calculator();
-    assertEquals(2, calculator.add(1, 1));
-    assertEquals(7, calculator.add(3, 4));
-}
-
-// Step 4: GREEN - Proper implementation
-public class Calculator {
-    public int add(int a, int b) {
-        return a + b;
-    }
-}
-
-// Step 5: REFACTOR (if needed)
-// Code is simple, no refactoring needed yet
-```
 
 ### Key Observations:
 - ✅ Started with simplest possible implementation
