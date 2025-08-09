@@ -101,30 +101,8 @@ TO:   "How will I know when it's solved?"
 ## 🏗️ Beyond Code: ODD (Operations-Driven Development)
 **(6 minutes)**
 
-### TDD Principles Apply Beyond Just Code:
+---
 
-### 🌟 TDD is a Design Philosophy, Not Just Testing
-
-The same principles that make code testable make systems:
-- **More modular**
-- **Easier to deploy**
-- **Simpler to monitor**
-- **Faster to debug**
-
-### From Code to Systems: The Natural Evolution
-
-**Testable Code Principles:**
-- Dependency injection
-- Single responsibility
-- Clear interfaces
-- Predictable behavior
-
-**↓ Applied to Systems:**
-- Container-based deployment
-- Service-oriented architecture
-- API-first design
-- Observable operations
-  
 ### Testable vs Non-Testable Scenarios
 
 **❌ Non-Testable Approach:**
@@ -190,8 +168,34 @@ public void shouldProcessOrderSuccessfully() {
 
 <img width="910" height="483" alt="ARCHITECTURE" src="https://github.com/user-attachments/assets/6fa88292-63ef-4e42-b96e-6b5a6ef02db5" />
 
+---
 
-### ODD: The Bigger Testing Picture
+### TDD Principles Apply Beyond Just Code:
+
+### 🌟 TDD is a Design Philosophy, Not Just Testing
+
+The same principles that make code testable make systems:
+- **More modular**
+- **Easier to deploy**
+- **Simpler to monitor**
+- **Faster to debug**
+
+### From Code to Systems: The Natural Evolution
+
+**Testable Code Principles:**
+- Dependency injection
+- Single responsibility
+- Clear interfaces
+- Predictable behavior
+
+**↓ Applied to Systems:**
+- Container-based deployment
+- Service-oriented architecture
+- API-first design
+- Observable operations
+  
+
+### Beyond Functional Test
 
 **🔧 Infrastructure Testing:**
 ```java
@@ -270,7 +274,7 @@ public void servicesShouldNotHaveCircularDependencies() {
 }
 ```
 
-**🎯 Key ODD Scenarios to Test:**
+**🎯 Key Non Functional Scenarios to Test:**
 
 1. **Long Running Processes** - Container health, graceful shutdown
 2. **Parallel vs Sequential Execution** - Race conditions, deadlocks  
