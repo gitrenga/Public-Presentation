@@ -52,9 +52,9 @@ TO:   "How will I know when it's solved?"
 ### Before TDD: The Struggles
 
 
-<img width="1070" height="761" alt="Screenshot from 2025-08-10 07-41-27" src="https://github.com/user-attachments/assets/e763607f-8253-4918-aaa5-28106a407cab" />
-<img width="1069" height="684" alt="Screenshot from 2025-08-10 07-41-45" src="https://github.com/user-attachments/assets/a9342b4d-4c72-40e8-bb0e-c0fcca899989" />
-<img width="1069" height="354" alt="Screenshot from 2025-08-10 07-42-03" src="https://github.com/user-attachments/assets/390246d7-f0df-4f6d-b753-f427a1606058" />
+<img width="915" height="863" alt="Screenshot from 2025-08-10 08-06-48" src="https://github.com/user-attachments/assets/c2a7308d-8059-46c4-8d43-590eeb150c60" />
+<img width="924" height="304" alt="Screenshot from 2025-08-10 08-07-16" src="https://github.com/user-attachments/assets/206c87f6-9335-4648-a117-ddf443f81b30" />
+
 
 ---
 ### Testable vs Non-Testable S/W
