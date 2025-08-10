@@ -31,22 +31,9 @@ TO:   "How will I know when it's solved?"
 ---
 ## 💻 Live Coding Demo: Building with TDD
 
+<img width="681" height="818" alt="Screenshot from 2025-08-10 08-38-40" src="https://github.com/user-attachments/assets/93616bd2-cfc3-40d4-8475-4560f0db2047" />
 
-### 🎭 Myth vs Reality Check
 
-| **Myth** | **Reality** |
-|----------|-------------|
-| "TDD slows you down" | Initial investment, long-term speed gain |
-| "100% coverage required" | Focus on behavior, not metrics |
-| "Only for unit tests" | Applies to all testing levels |
-| "Too complex for beginners" | Start small, build confidence |
-
-### Key Observations from Demo:
-- ✅ Started with simplest possible implementation
-- ✅ Each test forced better code design
-- ✅ Confidence to make changes immediately
-- ✅ Clear specification of behavior
-- ✅ Refactoring became fearless
 ---
 ## 💔 The Pain → 💚 The Transformation
 ### Before TDD: The Struggles
