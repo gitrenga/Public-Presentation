@@ -253,40 +253,8 @@ public void servicesShouldNotHaveCircularDependencies() {
 ---
 ## ⚠️ Common TDD Pitfalls (Anti-Patterns)
 
+<img width="955" height="895" alt="Screenshot from 2025-08-10 07-56-24" src="https://github.com/user-attachments/assets/38739af6-b5ad-449f-a196-b747df62c11a" />
 
-### 🚨 Don't Do These:
-
-**❌ Testing Implementation Details**
-```java
-// BAD: Testing internal structure
-verify(userService).validateEmail(anyString());
-
-// GOOD: Testing behavior  
-User result = userService.createUser("test@example.com");
-assertTrue(result.isValid());
-```
-
-**❌ Ice Cream Cone Testing**
-- Too many slow E2E tests, few unit tests
-- Fragile, expensive, slow feedback
-
-**❌ 100% Coverage Obsession**
-- Coverage ≠ Quality
-- Focus on meaningful tests, not metrics
-
-**❌ Order-Dependent Tests**
-- Tests should run in any order
-- Each test sets up its own data
-
-**❌ Multiple Assertions Per Test**
-- Hard to debug when they fail
-- One concept per test
-
-### ✅ Do These Instead:
-- **Test the public interface** - What your users/callers see
-- **One assertion per concept** - Clear failure diagnosis
-- **Make tests readable** - They're documentation too
-- **Refactor test code** - Keep it clean like production code
 
 ---
 ## 🚦 When NOT to Use TDD
