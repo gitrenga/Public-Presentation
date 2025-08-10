@@ -340,21 +340,6 @@ assertTrue(result.isValid());
 
 ## ❓ Q&A & Interactive Discussion
 
-
-### 🗳️ Final Poll: What's Your Next Step?
-- Start TDD on current feature
-- Set up testing framework
-- Convince my team
-- Need more training
-- Ready to be TDD champion
-
-### Common Questions Covered:
-- **Speed concerns** → Show time savings data
-- **Legacy code challenges** → Start with new features
-- **Team adoption** → Begin with volunteers
-- **Tool selection** → Use what fits your stack
-
-### Questions to Ponder
 - How to Tell Test Before VS Test After from Testcase (Code) ?
 - How to Tell whether TDD is followed by seeing the code ?
 - TDD makes you write More/Less Code ?
