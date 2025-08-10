@@ -258,21 +258,9 @@ public void servicesShouldNotHaveCircularDependencies() {
 
 ---
 ## 🚦 When NOT to Use TDD
-**(3 minutes)**
 
-### ⏸️ Skip TDD For:
-- **Spike/exploration code** - You're learning
-- **Trivial getters/setters** - No business logic
-- **Pure UI layouts** - Visual design work
-- **Performance optimization** - Measurement-focused
+<img width="772" height="814" alt="Screenshot from 2025-08-10 08-32-21" src="https://github.com/user-attachments/assets/4043c911-3035-4826-b005-7bc820d208a9" />
 
-### 🎯 The Decision Framework:
-**Ask yourself**: 
-- "Will this break user workflows if it fails?"
-- "Are there multiple ways this could go wrong?"
-- "Will I need to change this frequently?"
-
-**If YES → Use TDD**
 
 ---
 
