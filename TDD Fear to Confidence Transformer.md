@@ -30,6 +30,7 @@ FROM: "How do I solve this problem?"
 TO:   "How will I know when it's solved?"
 ```
 ---
+
 ## 💻 Live Coding Demo: Building with TDD
 
 ---
