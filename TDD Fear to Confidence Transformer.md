@@ -1,7 +1,8 @@
 # Test-Driven Development (TDD)
 ## Fear to Confidence Transformer
 
-<img width="518" height="578" alt="Test-Agenda" src="https://github.com/user-attachments/assets/13bf25b2-524c-4e28-8ffe-01d69a9a4070" />
+<img width="531" height="551" alt="Test-Agenda" src="https://github.com/user-attachments/assets/ec1945c7-02ad-4fa0-9335-32826debf302" />
+
 
 ---
 ## 👨‍💻 About Me & My TDD Journey
