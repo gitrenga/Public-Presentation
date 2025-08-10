@@ -51,29 +51,11 @@ TO:   "How will I know when it's solved?"
 ## 💔 The Pain → 💚 The Transformation
 ### Before TDD: The Struggles
 
-**🔥 Fear of the Unknown**
-- Problem: Too many unknowns, difficult end-to-end solutions
-- **TDD Solution**: No need to know everything - take manageable small steps
 
-**😰 Lack of Clarity & Communication**
-- Problem: Shy away from feedback, unclear requirements
-- **TDD Solution**: Clear intent, concrete & quick feedback
+<img width="1070" height="761" alt="Screenshot from 2025-08-10 07-41-27" src="https://github.com/user-attachments/assets/e763607f-8253-4918-aaa5-28106a407cab" />
+<img width="1069" height="684" alt="Screenshot from 2025-08-10 07-41-45" src="https://github.com/user-attachments/assets/a9342b4d-4c72-40e8-bb0e-c0fcca899989" />
+<img width="1069" height="354" alt="Screenshot from 2025-08-10 07-42-03" src="https://github.com/user-attachments/assets/390246d7-f0df-4f6d-b753-f427a1606058" />
 
-**🚫 Tentative Programming**
-- Problem: "Don't touch working code!"
-- **TDD Solution**: Confident experiments with aggressive refactoring safety net
-
-**📝 Requirements Misunderstanding**
-- Problem: What's written vs what's meant
-- **TDD Solution**: Requirements → Acceptance Criteria → Test Cases
-
-**⏰ Poor Estimates**
-- Problem: "How many problems to solve?" (vague)
-- **TDD Solution**: "How many things to test?" (concrete: 3 vs 30, 3 vs 5)
-
-**📚 Living Documentation**
-- Problem: Outdated docs
-- **TDD Solution**: Executable specifications that never lie
 ---
 ### Testable vs Non-Testable S/W
 <img width="1530" height="531" alt="Screenshot from 2025-08-09 15-17-17" src="https://github.com/user-attachments/assets/6a315fdf-3de3-4265-bc58-89b88d182ff2" />
