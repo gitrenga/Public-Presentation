@@ -257,7 +257,7 @@ public void servicesShouldNotHaveCircularDependencies() {
 
 
 ---
-## 🚦 When NOT to Use TDD
+## 🚦 When & NOT (to Use TDD)
 
 <img width="772" height="814" alt="Screenshot from 2025-08-10 08-32-21" src="https://github.com/user-attachments/assets/4043c911-3035-4826-b005-7bc820d208a9" />
 
