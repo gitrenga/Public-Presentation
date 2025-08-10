@@ -42,8 +42,10 @@ TO:   "How will I know when it's solved?"
 
 <img width="915" height="863" alt="Screenshot from 2025-08-10 08-06-48" src="https://github.com/user-attachments/assets/c2a7308d-8059-46c4-8d43-590eeb150c60" />
 <img width="924" height="304" alt="Screenshot from 2025-08-10 08-07-16" src="https://github.com/user-attachments/assets/206c87f6-9335-4648-a117-ddf443f81b30" />
-<img width="661" height="271" alt="tESTING-qUESTIONS" src="https://github.com/user-attachments/assets/58207eb3-400d-44be-a6c5-81a726b613a1" />
 
+---
+
+<img width="661" height="271" alt="tESTING-qUESTIONS" src="https://github.com/user-attachments/assets/58207eb3-400d-44be-a6c5-81a726b613a1" />
 
 ---
 ### Testable vs Non-Testable S/W
