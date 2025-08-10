@@ -354,7 +354,8 @@ Copy and paste the HTML blocks below into your markdown documents. Each section 
 
 ## Header Section
 
-```html
+```
+html
 <div style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 30px; text-align: center; color: white; border-radius: 15px; margin: 20px 0; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);">
   <h1 style="font-size: 2.5rem; margin: 0 0 10px 0; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); font-family: 'Segoe UI', sans-serif;">🎯 TDD Adoption Guide</h1>
   <p style="font-size: 1.2rem; margin: 0; opacity: 0.9;">Role-Specific Benefits, Roadmap & Resistance Handling</p>
