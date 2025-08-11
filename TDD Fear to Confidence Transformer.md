@@ -42,8 +42,6 @@ TO:   "How will I know when it's solved?"
 ---
 <img width="1045" height="340" alt="Test-Refactor" src="https://github.com/user-attachments/assets/541a8056-e6d4-4262-b118-702b5b02ee9f" />
 
-<img width="661" height="271" alt="tESTING-qUESTIONS" src="https://github.com/user-attachments/assets/58207eb3-400d-44be-a6c5-81a726b613a1" />
-
 ---
 ### Testable vs Non-Testable S/W
 <img width="1530" height="531" alt="Screenshot from 2025-08-09 15-17-17" src="https://github.com/user-attachments/assets/6a315fdf-3de3-4265-bc58-89b88d182ff2" />
