@@ -31,6 +31,10 @@ TO:   "How will I know when it's solved?"
 ```
 ---
 
+<img width="1045" height="340" alt="Test-Refactor" src="https://github.com/user-attachments/assets/541a8056-e6d4-4262-b118-702b5b02ee9f" />
+
+---
+
 ## 💻 Live Coding Demo: Building with TDD
 
 ---
@@ -38,9 +42,6 @@ TO:   "How will I know when it's solved?"
 
 <img width="915" height="863" alt="Screenshot from 2025-08-10 08-06-48" src="https://github.com/user-attachments/assets/c2a7308d-8059-46c4-8d43-590eeb150c60" />
 <img width="924" height="304" alt="Screenshot from 2025-08-10 08-07-16" src="https://github.com/user-attachments/assets/206c87f6-9335-4648-a117-ddf443f81b30" />
-
----
-<img width="1045" height="340" alt="Test-Refactor" src="https://github.com/user-attachments/assets/541a8056-e6d4-4262-b118-702b5b02ee9f" />
 
 ---
 ### Testable   vs Non-Testable S/W    
