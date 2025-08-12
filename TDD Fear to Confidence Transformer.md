@@ -38,6 +38,10 @@ TO:   "How will I know when it's solved?"
 ## 💻 Live Coding Demo: Building with TDD
 
 ---
+
+<img width="681" height="818" alt="Screenshot from 2025-08-10 08-38-40" src="https://github.com/user-attachments/assets/93616bd2-cfc3-40d4-8475-4560f0db2047" />
+
+---
 ## 💔 The Pain → 💚 The Transformation
 
 <img width="915" height="863" alt="Screenshot from 2025-08-10 08-06-48" src="https://github.com/user-attachments/assets/c2a7308d-8059-46c4-8d43-590eeb150c60" />
@@ -282,7 +286,7 @@ public void servicesShouldNotHaveCircularDependencies() {
 
 <img width="1362" height="470" alt="image" src="https://github.com/user-attachments/assets/63c310e1-282d-40e4-9cb5-8ad285a562d1" />
 
-<img width="681" height="818" alt="Screenshot from 2025-08-10 08-38-40" src="https://github.com/user-attachments/assets/93616bd2-cfc3-40d4-8475-4560f0db2047" />
+
 
 ---
 
